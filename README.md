@@ -1,5 +1,4 @@
 # TowerDefense
-First  version
 Tower Defense希望实现的基本功能：
 （1）多类型敌人和其多类型的攻击手段。
 （2）不同类型的防御塔及拥有的不同属性，包括物理攻击、攻击范围、频率和强度等。
