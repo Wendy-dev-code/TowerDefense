@@ -1,0 +1,38 @@
+## [0.2.0] - 2020-06-14
+### Added
+mainwindow.h mainwindow.cpp
+mybotton.h mybotton.cpp
+添加了第一个界面的绘画
+建立了一个按钮 构造函数MyBotton(QString pic)，设置了按钮的大小，图标，以及鼠标右键点击图标可以显示内容setTower
+void zoomup()，void zoomdown()函数实现了按钮的上下弹跳， 通过connect函数实现了第一个界面到第二个界面的转换
+
+mywindow.h mywindow.cpp
+explicit MyWindow(QWidget *parent=nullptr);
+完成了第二个界面的绘画，通过计时器每十秒更新一下界面
+通过connect函数实现了点击按钮就可以添加一个物体
+void paintEvent(QPaintEvent *);
+画了一座塔，和两个物体
+void set_tower();
+void addobject();
+void updatescene();
+
+object.h object.cpp
+Object(QPoint startpos,QPoint targetpos,QString filename);
+void draw(QPainter *painter);
+void move();
+QPoint getCurrentpos();
+void setCurrentpos(QPoint pos);
+实现了物体两点之间的移动
+
+object1.h object1.cpp
+ Object1(QPoint startpos,QPoint targetpos,QString filename);
+ void move();
+ void draw(QPainter *painter);
+ 实现了物体两点之间的移动，相较于object而言通过QVector2D 给物体的移动提供了速度
+ 
+ ###Removed
+ 没有继续用老师给的qtmap来修改
+
+
+
+
